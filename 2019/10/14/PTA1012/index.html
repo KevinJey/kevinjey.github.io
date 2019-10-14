@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="1001 害死人不偿命的(3n+1)猜想 (15 分)卡拉兹(Callatz)猜想： 对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1">
+  <meta name="description" content="题目链接 参考代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;s">
 <meta name="keywords" content="PTA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA-1001">
-<meta property="og:url" content="http://yoursite.com/2019/10/13/PTA1001/index.html">
+<meta property="og:title" content="PTA1012">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/PTA1012/index.html">
 <meta property="og:site_name" content="Hxx&#39;s Blog">
-<meta property="og:description" content="1001 害死人不偿命的(3n+1)猜想 (15 分)卡拉兹(Callatz)猜想： 对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1">
+<meta property="og:description" content="题目链接 参考代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;s">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T11:27:25.794Z">
+<meta property="og:updated_time" content="2019-10-14T08:42:40.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PTA-1001">
-<meta name="twitter:description" content="1001 害死人不偿命的(3n+1)猜想 (15 分)卡拉兹(Callatz)猜想： 对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1">
-  <link rel="canonical" href="http://yoursite.com/2019/10/13/PTA1001/">
+<meta name="twitter:title" content="PTA1012">
+<meta name="twitter:description" content="题目链接 参考代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;s">
+  <link rel="canonical" href="http://yoursite.com/2019/10/14/PTA1012/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>PTA-1001 | Hxx's Blog</title>
+  <title>PTA1012 | Hxx's Blog</title>
   
 
 
@@ -209,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/13/PTA1001/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/14/PTA1012/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hxx">
@@ -221,7 +221,7 @@
       <meta itemprop="name" content="Hxx's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">PTA-1001
+        <h1 class="post-title" itemprop="name headline">PTA1012
 
           
         </h1>
@@ -237,7 +237,7 @@
                 
               
 
-              <time title="创建时间：2019-10-13 19:21:59 / 修改时间：19:27:25" itemprop="dateCreated datePublished" datetime="2019-10-13T19:21:59+08:00">2019-10-13</time>
+              <time title="创建时间：2019-10-14 16:25:40 / 修改时间：16:42:40" itemprop="dateCreated datePublished" datetime="2019-10-14T16:25:40+08:00">2019-10-14</time>
             </span>
           
             
@@ -256,15 +256,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1001-害死人不偿命的-3n-1-猜想-15-分"><a href="#1001-害死人不偿命的-3n-1-猜想-15-分" class="headerlink" title="1001 害死人不偿命的(3n+1)猜想 (15 分)"></a>1001 害死人不偿命的(3n+1)猜想 (15 分)</h3><p>卡拉兹(Callatz)猜想：</p>
-<p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
-<a id="more"></a>
-<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>每个测试输入包含 1 个测试用例，即给出正整数 n 的值。</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>输出从 n 计算到 1 需要的步数。</p>
-<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p><code>3</code></p>
-<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p><code>5</code></p>
-<h3 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"><span class="built_in">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">int</span> <span class="built_in">num</span>,t=<span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		scanf(<span class="string">"%d"</span>, &amp;<span class="built_in">num</span>);</span><br><span class="line">	&#125; <span class="keyword">while</span> (!(<span class="built_in">num</span> &gt;=<span class="number">1</span> &amp;&amp; <span class="built_in">num</span> &lt;= <span class="number">1000</span>));</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">num</span> != <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">num</span> % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">			<span class="built_in">num</span> = <span class="built_in">num</span> / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">num</span> = (<span class="number">3</span> * <span class="built_in">num</span> + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">		t++;</span><br><span class="line">	&#125;</span><br><span class="line">  printf(<span class="string">"%d\n"</span>, t);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805311146147840" target="_blank" rel="noopener">题目链接</a></p>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> A1 = <span class="number">0</span>, A2 = <span class="number">0</span>, A3 = <span class="number">0</span>, A4Count = <span class="number">0</span>, A5 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">double</span> A4 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> isAdd = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> isExist1 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> isExist2 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> isExist3 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> isExist4 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> isExist5 = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, i, j;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">int</span> * <span class="built_in">list</span>=(<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*n);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, <span class="built_in">list</span> + i);</span><br><span class="line">		<span class="keyword">if</span> (i == <span class="number">0</span>)&#123;</span><br><span class="line">			A5 = <span class="built_in">list</span>[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">list</span>[i]&lt;A5)&#123;</span><br><span class="line">				A5 = <span class="built_in">list</span>[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">		i = <span class="built_in">list</span>[j];</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">10</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			isExist1 = <span class="number">1</span>;</span><br><span class="line">			A1 += i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">1</span>) &#123;</span><br><span class="line">			isExist2 = <span class="number">1</span>;</span><br><span class="line">			A2 += isAdd ? i : -i;</span><br><span class="line">			isAdd = !isAdd;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">2</span>) &#123;</span><br><span class="line">			isExist3 = <span class="number">1</span>;</span><br><span class="line">			A3++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">3</span>) &#123;</span><br><span class="line">			isExist4 = <span class="number">1</span>;</span><br><span class="line">			A4 += i;</span><br><span class="line">			A4Count++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">4</span> &amp;&amp; i &gt; A5) &#123;</span><br><span class="line">			isExist5 = <span class="number">1</span>;</span><br><span class="line">			A5 = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	A4 /= A4Count;</span><br><span class="line">	<span class="keyword">if</span> (isExist1)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, A1);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"N "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (isExist2)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, A2);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"N "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (isExist3)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, A3);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"N "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (isExist4)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.1lf "</span>, A4);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"N "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (isExist5)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>, A5);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"N"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -289,14 +282,18 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/10/14/PTA1011/" rel="next" title="PTA1011">
+                  <i class="fa fa-chevron-left"></i> PTA1011
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/10/14/PTA1002/" rel="prev" title="PTA-1002">
-                  PTA-1002 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/10/14/PTA1013/" rel="prev" title="PTA1013">
+                  PTA1013 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -343,7 +340,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1001-害死人不偿命的-3n-1-猜想-15-分"><span class="nav-number">1.</span> <span class="nav-text">1001 害死人不偿命的(3n+1)猜想 (15 分)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入格式："><span class="nav-number"></span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出格式："><span class="nav-number"></span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入样例："><span class="nav-number"></span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出样例："><span class="nav-number"></span> <span class="nav-text">输出样例：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考代码"><span class="nav-number">1.</span> <span class="nav-text">参考代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考代码"><span class="nav-number">1.</span> <span class="nav-text">参考代码</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->

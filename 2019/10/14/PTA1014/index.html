@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="题目链接1014 福尔摩斯的约会 (20 分)大侦探福尔摩斯接到一张奇怪的字条：我们约会吧！ 3485djDkxh4hhGE 2984akDfkkkkggEdsb s&amp;amp;hgsfdk d&amp;amp;Hyscvnm。大侦探很快就明白了，字条上奇怪的乱码实际上就是约会的时间星期四 14:04，因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母 D，代表星期四；第 2 对">
+<meta name="keywords" content="PTA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PTA1014">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/PTA1014/index.html">
+<meta property="og:site_name" content="Hxx&#39;s Blog">
+<meta property="og:description" content="题目链接1014 福尔摩斯的约会 (20 分)大侦探福尔摩斯接到一张奇怪的字条：我们约会吧！ 3485djDkxh4hhGE 2984akDfkkkkggEdsb s&amp;amp;hgsfdk d&amp;amp;Hyscvnm。大侦探很快就明白了，字条上奇怪的乱码实际上就是约会的时间星期四 14:04，因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母 D，代表星期四；第 2 对">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-14T08:46:09.650Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PTA1014">
+<meta name="twitter:description" content="题目链接1014 福尔摩斯的约会 (20 分)大侦探福尔摩斯接到一张奇怪的字条：我们约会吧！ 3485djDkxh4hhGE 2984akDfkkkkggEdsb s&amp;amp;hgsfdk d&amp;amp;Hyscvnm。大侦探很快就明白了，字条上奇怪的乱码实际上就是约会的时间星期四 14:04，因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母 D，代表星期四；第 2 对">
+  <link rel="canonical" href="http://yoursite.com/2019/10/14/PTA1014/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>PTA1014 | Hxx's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hxx's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/KevinJey" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/14/PTA1014/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hxx">
+      <meta itemprop="description" content="当你觉得自己做的足够好的时候，你已经杀死了更好的自己">
+      <meta itemprop="image" content="https://b-ssl.duitang.com/uploads/item/201610/06/20161006154606_CuAZX.thumb.700_0.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hxx's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">PTA1014
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-14 16:25:42 / 修改时间：16:46:09" itemprop="dateCreated datePublished" datetime="2019-10-14T16:25:42+08:00">2019-10-14</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805308755394560" target="_blank" rel="noopener">题目链接</a></p><h3 id="1014-福尔摩斯的约会-20-分"><a href="#1014-福尔摩斯的约会-20-分" class="headerlink" title="1014 福尔摩斯的约会 (20 分)"></a>1014 福尔摩斯的约会 (20 分)</h3><p>大侦探福尔摩斯接到一张奇怪的字条：我们约会吧！ 3485djDkxh4hhGE 2984akDfkkkkggEdsb s&amp;hgsfdk d&amp;Hyscvnm。大侦探很快就明白了，字条上奇怪的乱码实际上就是约会的时间星期四 14:04，因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母 D，代表星期四；第 2 对相同的字符是 E ，那是第 5 个英文字母，代表一天里的第 14 个钟头（于是一天的 0 点到 23 点由数字 0 到 9、以及大写字母 A 到 N 表示）；后面两字符串第 1 对相同的英文字母 s 出现在第 4 个位置（从 0 开始计数）上，代表第 4 分钟。现给定两对字符串，请帮助福尔摩斯解码得到约会的时间。</p><a id="more"></a>
+
+<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>输入在 4 行中分别给出 4 个非空、不包含空格、且长度不超过 60 的字符串。</p>
+<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>在一行中输出约会的时间，格式为 DAY HH:MM，其中 DAY 是某星期的 3 字符缩写，即 MON 表示星期一，TUE 表示星期二，WED 表示星期三，THU 表示星期四，FRI 表示星期五，SAT 表示星期六，SUN 表示星期日。题目输入保证每个测试存在唯一解。</p>
+<h2 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h2><p>3485djDkxh4hhGE<br>2984akDfkkkkggEdsb<br>s&amp;hgsfdk<br>d&amp;Hyscvnm</p>
+<h2 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h2><p>THU 14:04</p>
+<h2 id="思路介绍"><a href="#思路介绍" class="headerlink" title="思路介绍"></a>思路介绍</h2><p>这是一个比较复杂的模拟题 为了防止处理数据时的复杂性 我们设置了两个数组<br>const string ddt = “0123456789ABCDEFGHIJKLMN”;<br>char day[7][10] = { “MON”, “TUE”, “WED”, “THU”, “FRI”, “SAT”, “SUN” };<br>用于映射并快速处理数据</p>
+<h2 id="代码参考"><a href="#代码参考" class="headerlink" title="代码参考"></a>代码参考</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="meta">#include&lt;cstdio&gt;</span></span><br><span class="line"><span class="meta">#include&lt;cstring&gt;</span></span><br><span class="line"><span class="meta">#include&lt;string&gt;</span></span><br><span class="line"><span class="meta">#include&lt;vector&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">const <span class="keyword">int</span> maxn = <span class="number">60</span> + <span class="number">5</span>;</span><br><span class="line">string <span class="keyword">str</span>[<span class="number">4</span>];</span><br><span class="line">const string ddt = <span class="string">"0123456789ABCDEFGHIJKLMN"</span>;</span><br><span class="line"><span class="keyword">char</span> day[<span class="number">7</span>][<span class="number">10</span>] = &#123; <span class="string">"MON"</span>, <span class="string">"TUE"</span>, <span class="string">"WED"</span>, <span class="string">"THU"</span>, <span class="string">"FRI"</span>, <span class="string">"SAT"</span>, <span class="string">"SUN"</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> main()&#123;</span><br><span class="line">	<span class="keyword">char</span> mark[<span class="number">10</span>];</span><br><span class="line">	memset(mark, <span class="number">0</span>, sizeof(mark));</span><br><span class="line">	<span class="keyword">int</span> <span class="keyword">count</span> = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> ch = <span class="number">0</span>;</span><br><span class="line">	bool flag1 = <span class="keyword">true</span>, flag2 = <span class="keyword">true</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)&#123;</span><br><span class="line">		getline(cin, <span class="keyword">str</span>[i]);</span><br><span class="line">		<span class="keyword">if</span> (i == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; <span class="keyword">str</span>[<span class="number">0</span>][j] &amp;&amp; <span class="keyword">str</span>[<span class="number">1</span>][j]; j++)&#123;</span><br><span class="line">				<span class="keyword">if</span> (<span class="keyword">count</span> == <span class="number">0</span>)&#123;</span><br><span class="line">					<span class="keyword">if</span> (<span class="keyword">str</span>[<span class="number">0</span>][j] == <span class="keyword">str</span>[<span class="number">1</span>][j] &amp;&amp; <span class="keyword">str</span>[<span class="number">0</span>][j] &gt;= <span class="string">'A'</span>&amp;&amp;<span class="keyword">str</span>[<span class="number">0</span>][j] &lt;= <span class="string">'G'</span>)</span><br><span class="line">						mark[<span class="keyword">count</span>++] = <span class="keyword">str</span>[<span class="number">0</span>][j];</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">count</span> == <span class="number">1</span>)&#123;</span><br><span class="line">					<span class="keyword">if</span> ( <span class="keyword">str</span>[<span class="number">1</span>][j] == <span class="keyword">str</span>[<span class="number">0</span>][j] &amp;&amp; <span class="keyword">str</span>[<span class="number">0</span>][j] &lt;= <span class="string">'N'</span>&amp;&amp;<span class="keyword">str</span>[<span class="number">0</span>][j] &gt;= <span class="string">'A'</span>)</span><br><span class="line">						mark[<span class="keyword">count</span>++] = <span class="keyword">str</span>[<span class="number">0</span>][j];</span><br><span class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (isdigit(<span class="keyword">str</span>[<span class="number">0</span>][j]) &amp;&amp; <span class="keyword">str</span>[<span class="number">0</span>][j] == <span class="keyword">str</span>[<span class="number">1</span>][j])</span><br><span class="line">					&#123;</span><br><span class="line">						mark[<span class="keyword">count</span>++] = <span class="keyword">str</span>[<span class="number">0</span>][j];</span><br><span class="line">				</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (<span class="keyword">count</span> == <span class="number">2</span>)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">3</span>)&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; <span class="keyword">str</span>[<span class="number">2</span>][j] &amp;&amp; <span class="keyword">str</span>[<span class="number">3</span>][j]; j++)</span><br><span class="line">				<span class="keyword">if</span> (isalpha(<span class="keyword">str</span>[<span class="number">2</span>][j]) &amp;&amp; <span class="keyword">str</span>[<span class="number">2</span>][j] == <span class="keyword">str</span>[<span class="number">3</span>][j])</span><br><span class="line">				&#123;</span><br><span class="line">				ch = j; <span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; mark[0] &lt;&lt; " " &lt;&lt; mark[1] &lt;&lt; endl;</span></span><br><span class="line">	printf(<span class="string">"%s %02d:%02d"</span>, day[(mark[<span class="number">0</span>] - <span class="string">'A'</span>)%<span class="number">7</span>], ddt.find(mark[<span class="number">1</span>]), ch);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/PTA/" rel="tag"># PTA</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/14/PTA1013/" rel="next" title="PTA1013">
+                  <i class="fa fa-chevron-left"></i> PTA1013
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/14/PTA1015/" rel="prev" title="PTA1015">
+                  PTA1015 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1014-福尔摩斯的约会-20-分"><span class="nav-number">1.</span> <span class="nav-text">1014 福尔摩斯的约会 (20 分)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入格式："><span class="nav-number"></span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出格式："><span class="nav-number"></span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入样例："><span class="nav-number"></span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出样例："><span class="nav-number"></span> <span class="nav-text">输出样例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路介绍"><span class="nav-number"></span> <span class="nav-text">思路介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码参考"><span class="nav-number"></span> <span class="nav-text">代码参考</span></a></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://b-ssl.duitang.com/uploads/item/201610/06/20161006154606_CuAZX.thumb.700_0.jpeg"
+      alt="Hxx">
+  <p class="site-author-name" itemprop="name">Hxx</p>
+  <div class="site-description" itemprop="description">当你觉得自己做的足够好的时候，你已经杀死了更好的自己</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/KevinJey" title="GitHub &rarr; https://github.com/KevinJey" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://blog.csdn.net/qq_37225146" title="CSDN &rarr; https://blog.csdn.net/qq_37225146" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:1617653943@qq.com" title="E-Mail &rarr; mailto:1617653943@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hxx</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
